@@ -16,15 +16,15 @@
   <meta name="author" content="LukouofSaca">
   <meta name="keywords" content="">
   
-    <meta name="description" content="分层结构设计">
+    <meta name="description" content="分层模型">
 <meta property="og:type" content="article">
 <meta property="og:title" content="计算机网络的分层模型">
 <meta property="og:url" content="http://lukouofsaca.github.io/2024/09/03/CN-%E5%88%86%E5%B1%82%E6%A8%A1%E5%9E%8B/index.html">
 <meta property="og:site_name" content="Saca&#39;s Blog">
-<meta property="og:description" content="分层结构设计">
+<meta property="og:description" content="分层模型">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-03T06:09:00.000Z">
-<meta property="article:modified_time" content="2024-09-03T06:09:55.958Z">
+<meta property="article:modified_time" content="2024-09-03T08:32:09.590Z">
 <meta property="article:author" content="LukouofSaca">
 <meta property="article:tag" content="考研">
 <meta property="article:tag" content="408">
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          6 字
+          2.4k 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          1 分钟
+          21 分钟
         
       </span>
     
@@ -275,7 +275,217 @@
             
               <div class="markdown-body">
                 
-                <h2 id="分层结构设计"><a href="#分层结构设计" class="headerlink" title="分层结构设计"></a>分层结构设计</h2>
+                <h2 id="分层结构设计"><a href="#分层结构设计" class="headerlink" title="分层结构设计"></a>分层结构设计</h2><h3 id="分层设计思想"><a href="#分层设计思想" class="headerlink" title="分层设计思想"></a>分层设计思想</h3><h4 id="基本原则"><a href="#基本原则" class="headerlink" title="基本原则"></a>基本原则</h4><ol>
+<li><p>每层实现一种相对独立的功能，降低大系统的复杂度。</p>
+</li>
+<li><p>各层之间的结构相对清晰，易于理解，相互交流尽可能少</p>
+</li>
+<li><p>层的精确定义独立于层的实现方法，从而可以采用最合适的技术实现。</p>
+</li>
+<li><p>下层对上层独立，上层<strong>单向使用</strong>下层提供的服务。</p>
+</li>
+<li><p>整个分层应该能促进标准化工作</p>
+</li>
+</ol>
+<p>在分层结构中，标号高的层是上层，低的层是下层。</p>
+<p>从而，<strong>n层提供的服务被n+1层所使用</strong>。</p>
+<p>在分层模型中，<strong>高层应当实现低层已经实现的全部服务</strong>。</p>
+<h4 id="单元"><a href="#单元" class="headerlink" title="单元"></a>单元</h4><p><strong>对等层之间</strong>的数据单位成为该层的<strong>协议数据单元</strong>（PDU），第N层的成为n-PDU。</p>
+<p>各层的数据单元都分为两个部分：用户数据和协议信息。</p>
+<p><strong>服务数据单元</strong>：SDU。为完成用户所要求的功能而传送的数据。</p>
+<p><strong>协议控制信息</strong>：PCI。控制协议操作的信息。第n层的PCI成为n-PCI。</p>
+<p>常见PDU的名称如下：（考研使用的五层模型）</p>
+<table>
+<thead>
+<tr>
+<th>层号</th>
+<th>PDU名称</th>
+<th>层名称</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>比特流</td>
+<td>物理层</td>
+</tr>
+<tr>
+<td>2</td>
+<td>帧</td>
+<td>数据链路层</td>
+</tr>
+<tr>
+<td>3</td>
+<td>分组</td>
+<td>网络层</td>
+</tr>
+<tr>
+<td>4</td>
+<td>报文段</td>
+<td>传输层</td>
+</tr>
+<tr>
+<td>5</td>
+<td>报文</td>
+<td>应用层</td>
+</tr>
+</tbody></table>
+<h3 id="协议、接口、服务"><a href="#协议、接口、服务" class="headerlink" title="协议、接口、服务"></a>协议、接口、服务</h3><h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><p>计算机分层接口中的三个主要概念是协议、接口和服务。他们分别描述了对等层之间的关系，上下层之间的访问关系和上下层之间的功能关系。</p>
+<h4 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h4><p>协议由三个部分组成。包括语义、语法和同步。</p>
+<p><strong>语法：</strong> 数据和控制信息的格式。或者说PDU的格式。</p>
+<p><strong>语义：</strong> 不同语法的动作含义。或者说收到命令&#x2F;传输数据后所需要完成的全部动作。</p>
+<p><strong>同步&#x2F;时序：</strong> 执行各种操作的条件、时序关系，也即事件中语义顺序的详细说明。</p>
+<blockquote>
+<p>用数据结构的<strong>操作原语</strong>来类比<strong>协议数据单元</strong>可能会有助于区分这三个概念。</p>
+<p>语法&#x3D;原语的<strong>形式结构</strong>，例如INSERT(A,X)这个形式本身就是一个语法。</p>
+<p>语义&#x3D;原语的<strong>实际含义</strong>，例如INSERT(A,X)表示头插A进入X中。</p>
+<p>同步&#x2F;时序&#x3D;原语的<strong>使用顺序</strong>。考虑一个具体的链表功能，需要多个原语才能实现，时序相当于规定了原语的使用顺序，或者说什么情况下下一个原语应当是什么。</p>
+</blockquote>
+<h4 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h4><p>同一结点内的相邻两层的实体交换信息的逻辑接口称为<strong>服务访问点（service access point）</strong>。服务通过服务访问点被提供给上层协议。</p>
+<p>例如，数据链路层通过帧类型进行服务访问，也就是说网络可以通过帧类型来访问数据链路层提供的不同服务。</p>
+<h4 id="服务"><a href="#服务" class="headerlink" title="服务"></a>服务</h4><p>下层为上一层提供的功能被称为服务。</p>
+<p>服务由四种类型的原语组成：请求，指示，相应，证实。</p>
+<p>其中，请求和相应由高层发送给低层，另外两种由底层发往高层。</p>
+<h2 id="参考模型"><a href="#参考模型" class="headerlink" title="参考模型"></a>参考模型</h2><h3 id="OSI参考模型"><a href="#OSI参考模型" class="headerlink" title="OSI参考模型"></a>OSI参考模型</h3><blockquote>
+<p>了解模型分层</p>
+<p>了解常见设备的运用</p>
+</blockquote>
+<p>OSI模型是一个7层的模型。其中低三层被称为通信子网，高三层被称为资源子网。OSI模型的内容如下：</p>
+<table>
+<thead>
+<tr>
+<th>层号</th>
+<th>名称</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>7</td>
+<td>应用层</td>
+</tr>
+<tr>
+<td>6</td>
+<td>表示层</td>
+</tr>
+<tr>
+<td>5</td>
+<td>会话层</td>
+</tr>
+<tr>
+<td>4</td>
+<td>传输层&#x2F;运输层</td>
+</tr>
+<tr>
+<td>3</td>
+<td>网络层</td>
+</tr>
+<tr>
+<td>2</td>
+<td>数据链路层</td>
+</tr>
+<tr>
+<td>1</td>
+<td>物理层</td>
+</tr>
+</tbody></table>
+<p>OSI模型具有更清晰的结构，但是由于过于复杂以及应用层的过于繁琐，一直没有成为主流的网络模型。</p>
+<blockquote>
+<p>“物联网叔会使用” by 王道 楼楼</p>
+</blockquote>
+<h4 id="物理介质层"><a href="#物理介质层" class="headerlink" title="物理介质层"></a>物理介质层</h4><p>“第0层”。包括实际使用的物理介质链路的物理特征。这一层并不在物理层之类。为了体现这一点，我们在这里使用第0层的说法。</p>
+<h4 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h4><p>物理层的传输单位是bit,功能是<strong>在物理数据段上为设备透明地传输原始比特流</strong></p>
+<p>物理层规定了物理特征，包括：</p>
+<ol>
+<li><p>链路<strong>接口</strong>的参数和物理特征，例如形状，大小和交换电路的数量；</p>
+</li>
+<li><p>信号的意义，例如0和1的电平表示；</p>
+</li>
+</ol>
+<p>物理信道的一些特点，例如对信道频率的规定和复用方式，也属于物理层协议的内容。</p>
+<blockquote>
+<p>通俗的说，<strong>物理接口</strong>能感知到的特征（接口的样子，接口接收的电平特征如何解释）都属于物理层的特征，包括信道的<strong>额定传输速率</strong>。</p>
+<p><strong>然而，信道的工作传输速率是数据链路层特征，因为这一速率是数据链路的速率，而不是物理链路的速率。</strong></p>
+</blockquote>
+<h4 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h4><p><strong>OSI的数据链路层</strong>将分组封装成帧，并<strong>在不可靠的物理链路上提供可靠的逻辑<em>链路</em>服务。</strong>（王道说的是确保相邻节点之间的链路逻辑上无差错）</p>
+<p>这里的链路是节点到节点的，不是电路式的。</p>
+<p>数据链路层包括两个任务：</p>
+<ol>
+<li><p>差错控制；</p>
+</li>
+<li><p>（OSI）流量控制。</p>
+</li>
+</ol>
+<blockquote>
+<p>流量控制用于确保逻辑链路不会出现帧丢失的差错</p>
+</blockquote>
+<h4 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h4><p>网络层将分组从源节点转发到目的节点。</p>
+<p>网络层的主要任务：</p>
+<ol>
+<li><p>路由选择：构造维护路由表，决定分组到目的节点的路径</p>
+</li>
+<li><p>分组转发：将分组从合适的端口转发出去。</p>
+</li>
+<li><p>拥塞控制：发现网络拥塞，采取措施缓解拥塞</p>
+</li>
+<li><p>网际互连：实现异构网络互联。</p>
+</li>
+</ol>
+<blockquote>
+<p>网络层关心的是<strong>作为物理网络的通信子网</strong>的功能（或者说通信子网作为图的特点），而数据链路层关心的是通信子网的<strong>点对点</strong>功能。</p>
+</blockquote>
+<p>其他任务：</p>
+<p>    分组的正确性，连接的建立和释放，可靠的传输管理。</p>
+<p><strong>OSI的网络层拥有面向连接的虚电路服务和无连接的数据包服务两种模式。</strong></p>
+<h4 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h4><p>传输层用于实现端到端的通信（或者说端口到端口，进程到进程的通信）。</p>
+<p><strong>OSI的网络层只有面向连接一种模式。</strong></p>
+<h4 id="会话层"><a href="#会话层" class="headerlink" title="会话层"></a>会话层</h4><p>用于管理进程之间的会话。</p>
+<p>一个会话是一个持续的通信过程；可能包括多次通信。</p>
+<h4 id="表示层"><a href="#表示层" class="headerlink" title="表示层"></a>表示层</h4><p>表示层用于解决不同节点之间编码和表示不同的问题，提供高标准的数据结构和数据编码。</p>
+<h4 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h4><p>用于对用户实现不同的服务。例如：SMTP,HTTP,FTP等等。</p>
+<h3 id="TCP-IP模型"><a href="#TCP-IP模型" class="headerlink" title="TCP&#x2F;IP模型"></a>TCP&#x2F;IP模型</h3><h4 id="TCP-IP的层顺序"><a href="#TCP-IP的层顺序" class="headerlink" title="TCP&#x2F;IP的层顺序"></a>TCP&#x2F;IP的层顺序</h4><table>
+<thead>
+<tr>
+<th>编号</th>
+<th>名称</th>
+<th>对应OSI层编号</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>4</td>
+<td>应用层</td>
+<td>7,6,5</td>
+</tr>
+<tr>
+<td>3</td>
+<td>传输层</td>
+<td>4</td>
+</tr>
+<tr>
+<td>2</td>
+<td>网络层&#x2F;网际层</td>
+<td>3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>网络接口层</td>
+<td>2,1</td>
+</tr>
+</tbody></table>
+<h4 id="TCP-IP的层设计理念"><a href="#TCP-IP的层设计理念" class="headerlink" title="TCP&#x2F;IP的层设计理念"></a>TCP&#x2F;IP的层设计理念</h4><p><strong>TCP&#x2F;IP是商业驱动的模型，分层的方法同时也保护位于不同层的开发商的利益。</strong></p>
+<h5 id="7-5层"><a href="#7-5层" class="headerlink" title="7-5层"></a>7-5层</h5><p>都到了应用层了，那肯定是应用自行决定如何处理应用的表示和会话问题。而7-5层通常是由同一个项目组进行开发。</p>
+<p>如果非要处理表示和会话问题，那么项目组肯定能选择包含这两种功能的高层协议。</p>
+<h4 id="2-1层"><a href="#2-1层" class="headerlink" title="2-1层"></a>2-1层</h4><p>一般而言，高层服务的开发者永远不关心下层的物理链路是什么样子的，而下层的物理设备开发商往往需要同时开发数据链路层到物理层的所有功能。所以，合并物理层和链路层是有意义的。</p>
+<p>而另一方面，同一个本地网络几乎不可能采用不同网络设备商所制造的设备，即使真的有本地网络这么做了，也可以通过公版协议进行协调。所以，对于厂商而言，合并这两层是有意义的。</p>
+<p>所以，也可以看到TCP、IP没有描述网络接口层的具体协议，只需要为上一层提供标准服务即可。</p>
+<blockquote>
+<p>感觉这也是为啥TCP&#x2F;IP最终选用的名称是<strong>网际层</strong>。因为同一个设备制造商往往承包了本地网络段中网络接口层的全部任务；所以对这些设备制造商而言，他们对上层提供的服务不仅<strong>跨本地网络段</strong>，同时<strong>也跨设备制造商</strong>。在他们看来，这个层最重要的功能就是跨本地网络与其他的制造商进行网络连接。</p>
+</blockquote>
+<h4 id="4层"><a href="#4层" class="headerlink" title="4层"></a>4层</h4><p>网络和链路层并一定需要差错控制和流量控制，就算下面的层能确保本地正确，传输层协议还是得重新确认一遍。</p>
+<p>所以，IP网络层不再需要实现<strong>差错控制</strong>（OSI-2）、<strong>流量控制</strong>（OSI-2）、<strong>连接管理</strong>（OSI-3）、<strong>可靠传输管理</strong>（OSI-3），只需要尽最大努力转发。这些功能被交给了传输层进行。（所以传输节点不需要开包检查了，使得中间设备的速度增加、功能简化、造价降低）</p>
+<blockquote>
+<p>尽管TCP&#x2F;IP网络层（&#x3D;OSI&#x2F;3）不再需要进行流量控制，但是还是需要进行拥塞控制。这很奇怪……</p>
+<p>简单区分一下两类控制：<strong>流量控制作用于边，拥塞控制作用于点。</strong> </p>
+</blockquote>
+<p><strong><u>TCP&#x2F;IP的传输层在无连接不可靠的网络层上实现可靠或不可靠的的传输过程。</u></strong></p>
+
                 
               </div>
             
