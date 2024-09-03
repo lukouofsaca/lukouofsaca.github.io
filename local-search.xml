@@ -4,6 +4,77 @@
   
   
   <entry>
+    <title>计算机网络的分层模型</title>
+    <link href="/2024/09/03/CN-%E5%88%86%E5%B1%82%E6%A8%A1%E5%9E%8B/"/>
+    <url>/2024/09/03/CN-%E5%88%86%E5%B1%82%E6%A8%A1%E5%9E%8B/</url>
+    
+    <content type="html"><![CDATA[<h2 id="分层结构设计"><a href="#分层结构设计" class="headerlink" title="分层结构设计"></a>分层结构设计</h2>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>考研</tag>
+      
+      <tag>408</tag>
+      
+      <tag>计网</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>计算机网络的性能指标</title>
+    <link href="/2024/09/03/CN-%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/"/>
+    <url>/2024/09/03/CN-%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87/</url>
+    
+    <content type="html"><![CDATA[<h2 id="速率"><a href="#速率" class="headerlink" title="速率"></a>速率</h2><p>连接到网络上的结点按在数字信道上传送数据的速率(&#x3D;数据传输速率)</p><p>单位：b&#x2F;s(bit&#x2F;s,bps)</p><p>速率采用1000进制。</p><p>（容量采用2进制编码的1024进制）</p><h2 id="带宽"><a href="#带宽" class="headerlink" title="带宽"></a>带宽</h2><p>信道的最高速率</p><h2 id="吞吐量"><a href="#吞吐量" class="headerlink" title="吞吐量"></a>吞吐量</h2><p>实际的数据传输量</p><h2 id="时延"><a href="#时延" class="headerlink" title="时延"></a>时延</h2><p>数据（一组或一个报文）从网络的一端传送到另一端所需要的总时间：</p><p>一般分为四个部分：发送&#x2F;传输，传播，处理，排队。</p><h5 id="发送-传输"><a href="#发送-传输" class="headerlink" title="发送&#x2F;传输"></a>发送&#x2F;传输</h5><p>来自终端设备将bit发送到链路上的时间，也就是从发送分组的第一个bit到发送分组的最后一个bit所需要的时间。</p><h5 id="传播"><a href="#传播" class="headerlink" title="传播"></a>传播</h5><p>来自在介质中传播所花费的时间，例如电磁波，光信号的传输所需要的时间。</p><h5 id="处理"><a href="#处理" class="headerlink" title="处理"></a>处理</h5><p>数据在交换节点为存储转发而进行的一些必要处理所花费的使劲按。例如：分析分组首部、提取数据、差错检验、寻路等等</p><h5 id="排队时延"><a href="#排队时延" class="headerlink" title="排队时延"></a>排队时延</h5><p>进入路由器后要在队列中排队等待，在确定转发后还要再输出队列中排队等待转发。</p><h2 id="时延带宽积"><a href="#时延带宽积" class="headerlink" title="时延带宽积"></a>时延带宽积</h2><p>已发出未到达的最大比特数</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>考研</tag>
+      
+      <tag>408</tag>
+      
+      <tag>计网</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>xml1</title>
+    <link href="/2024/09/02/xml1/"/>
+    <url>/2024/09/02/xml1/</url>
+    
+    <content type="html"><![CDATA[<h2 id="XML-程序"><a href="#XML-程序" class="headerlink" title="XML 程序"></a>XML 程序</h2><p>xml是一种文件。</p><p>第一行：</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-meta">&lt;?xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;gb2312&quot;</span>?&gt;</span><br></code></pre></td></tr></table></figure><h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><ol><li>实现不同应用程序之间的数据交互</li></ol><h3 id="XML-HTML"><a href="#XML-HTML" class="headerlink" title="XML&#x2F;HTML"></a>XML&#x2F;HTML</h3><p>推广方不同</p><p>传递信息不同</p><p>XML现在常常和HTML一起使用。</p><h2 id="XML-文件的操作"><a href="#XML-文件的操作" class="headerlink" title="XML 文件的操作"></a>XML 文件的操作</h2><p><a href="#XML%E6%96%87%E4%BB%B6%E7%9A%84%E7%BC%96%E8%BE%91">1.2.1 XML文件的编辑</a></p><h3 id="XML文件的编辑"><a href="#XML文件的编辑" class="headerlink" title="XML文件的编辑"></a>XML文件的编辑</h3><ol><li><p>根标记唯一</p></li><li><p>标记大小写敏感</p></li><li><p>标记必须成对，正确嵌套</p></li><li><p>使用引号括起属性值</p></li></ol><p>eg</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">Person</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">person</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">name</span>&gt;</span>名字<span class="hljs-tag">&lt;<span class="hljs-name">name</span>/&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">id</span>&gt;</span>学号<span class="hljs-tag">&lt;/<span class="hljs-name">id</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">person</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">Person</span>&gt;</span><br></code></pre></td></tr></table></figure><h3 id="XML的设计目标"><a href="#XML的设计目标" class="headerlink" title="XML的设计目标"></a>XML的设计目标</h3><p>在Internet上直接使用</p><p>与SGML兼容</p><p>程序容易撰写</p><p>简洁</p><p>语法严格</p><p>容易建立</p><p>不需要简化标签</p><h3 id="XML的名称空间"><a href="#XML的名称空间" class="headerlink" title="XML的名称空间"></a>XML的名称空间</h3><p>W3C制定的名称空间规则，允许将属性和&#x2F;或标记前加上标记归属，从而区分相同名字的标记或者属性</p><h3 id="XML的文档对象模型"><a href="#XML的文档对象模型" class="headerlink" title="XML的文档对象模型"></a>XML的文档对象模型</h3><p>参考：<a href="https://learn.microsoft.com/zh-cn/dotnet/standard/data/xml/xml-document-object-model-dom">XML 文档对象模型 (DOM) - .NET | Microsoft Learn</a><a href="https://learn.microsoft.com/zh-cn/dotnet/standard/data/xml/xml-document-object-model-dom">XML 文档对象模型 (DOM) - .NET | Microsoft Learn</a></p><h3 id="XML的文档类型"><a href="#XML的文档类型" class="headerlink" title="XML的文档类型"></a>XML的文档类型</h3><p>DTD就是文档类型定义的语言，可以定义标记，属性，实体和他们之间的联系。相当于XML的约束文件</p><p>e.g. <!ELEMENT sex (#PCDATA)></p><p>Schema 文件对于刻画更加精确。Schema文件还可i约束值的范围，type的类型等等</p><h3 id="XML"><a href="#XML" class="headerlink" title="XML"></a>XML</h3>]]></content>
+    
+    
+    <categories>
+      
+      <category>服务计算</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>课程</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>漫谈：过于刻板的轻小说ヤンデレ刻板印象</title>
     <link href="/2024/08/27/yandere/"/>
     <url>/2024/08/27/yandere/</url>
