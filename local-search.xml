@@ -4,11 +4,93 @@
   
   
   <entry>
-    <title>/408/计算机网络/CN_物理层_3</title>
+    <title>ipv4-1</title>
+    <link href="/2024/09/06/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ipv4-1/"/>
+    <url>/2024/09/06/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ipv4-1/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>介质访问子层-以太网</title>
+    <link href="/2024/09/06/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/CN-MAC-STP/"/>
+    <url>/2024/09/06/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/CN-MAC-STP/</url>
+    
+    <content type="html"><![CDATA[<p>以太网交换机 使用STP协议来避免物理连接带来的环路问题。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>考研</tag>
+      
+      <tag>408</tag>
+      
+      <tag>计网</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>介质访问子层-2</title>
+    <link href="/2024/09/05/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/CN-MAC-1/"/>
+    <url>/2024/09/05/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/CN-MAC-1/</url>
+    
+    <content type="html"><![CDATA[<h2 id="MAC地址"><a href="#MAC地址" class="headerlink" title="MAC地址"></a>MAC地址</h2><p>物理地址。作用于数据链路层。</p><p><img src="C:\Users\saca\AppData\Roaming\marktext\images\2024-09-06-10-57-09-image.png"></p><p>MAC地址从第一字节往第七字节发送，字节内低位先发送。</p><h3 id="以太网以及802-3-MAC帧标准"><a href="#以太网以及802-3-MAC帧标准" class="headerlink" title="以太网以及802.3 MAC帧标准"></a>以太网以及802.3 MAC帧标准</h3><p>目的地址-源地址-类型-数据（&gt;46Bit）-检验码（4字节）</p><p>当Type字段值小于等于1500（）时，帧使用的是IEEE 802.3格式。当Type字段值大于等于1536（0x0600）时，帧使用的是Ethernet II格式。</p><p>常见的以太网类型字段：</p><table><thead><tr><th align="center">编号</th><th>帧类型</th></tr></thead><tbody><tr><td align="center">&lt; 0x05DC</td><td>IEEE 802.3长度</td></tr><tr><td align="center">0x0800</td><td>IPv4</td></tr><tr><td align="center">0x0806</td><td>ARP协议</td></tr><tr><td align="center">0x8100</td><td>自定义VLAN标签</td></tr><tr><td align="center">0x86DD</td><td>IPv6</td></tr><tr><td align="center">0x880B</td><td>PPP</td></tr></tbody></table><p>参考：<a href="https://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml#ieee-802-numbers-1">IEEE 802 Numbers</a></p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>考研</tag>
+      
+      <tag>408</tag>
+      
+      <tag>计网</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>介质访问子层-1</title>
+    <link href="/2024/09/04/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/CN-%E4%BB%8B%E8%B4%A8%E8%AE%BF%E9%97%AE%E5%AD%90%E5%B1%82-1/"/>
+    <url>/2024/09/04/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/CN-%E4%BB%8B%E8%B4%A8%E8%AE%BF%E9%97%AE%E5%AD%90%E5%B1%82-1/</url>
+    
+    <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>介质访问子层（MAC子层）是OSI数据链路层的两个子层之一，其功能是为介质的每个节点隔离来自一信道上其他节点的信号。</p><p>为了做到这件事，一般有两种不同的方法：1是静态信道划分，2是动态随即访问。</p><h2 id="信道划分的介质访问控制"><a href="#信道划分的介质访问控制" class="headerlink" title="信道划分的介质访问控制"></a>信道划分的介质访问控制</h2><h3 id="频分复用FDM"><a href="#频分复用FDM" class="headerlink" title="频分复用FDM"></a>频分复用FDM</h3><p>用不同的频带区分。</p><h3 id="时分复用TDM"><a href="#时分复用TDM" class="headerlink" title="时分复用TDM"></a>时分复用TDM</h3><p>用不同的时间段区分</p><h3 id="波分复用WDM"><a href="#波分复用WDM" class="headerlink" title="波分复用WDM"></a>波分复用WDM</h3><p>用不同的波区分</p><h3 id="码分复用CDM"><a href="#码分复用CDM" class="headerlink" title="码分复用CDM"></a>码分复用CDM</h3><p>用正交编码区分。一般用于多址接入（CDMA）。</p><ul><li><p>给每个站分配码片序列，这些序列正交且非0。</p></li><li><p>最终发送的值就是站发送的序列的和</p></li><li><p>判断的时候，用和分别去乘以各个码片序列。</p></li><li><p>因为正交，所以最终的结果等于自己的模长</p></li></ul><blockquote><p>本课程不严格区分多址和复用。</p></blockquote><h2 id="随即访问的介质访问控制"><a href="#随即访问的介质访问控制" class="headerlink" title="随即访问的介质访问控制"></a>随即访问的介质访问控制</h2><p>每个用户争用信道，胜利者获取发送权。</p><h3 id="ALOHA协议"><a href="#ALOHA协议" class="headerlink" title="ALOHA协议"></a>ALOHA协议</h3><p>在任意时隙均可发送。如果发送后检测到冲突，在<strong>完成发送后</strong>等待随机时间再次发送。</p><p>时隙ALOHA协议：只允许在特定的时隙发送。如果冲突，之后等待随机时间发送。</p><h3 id="CSMA协议："><a href="#CSMA协议：" class="headerlink" title="CSMA协议："></a>CSMA协议：</h3><p>在发送前先侦听。如果信道忙，放弃发送。（否则，<strong>完成发送</strong>。纯CSMA不会中途停止发送。）</p><h4 id="坚持型"><a href="#坚持型" class="headerlink" title="坚持型"></a>坚持型</h4><p>k-坚持型CSMA表示在冲突后以k的概率在下一个时序继续监听信道，否则，等待一段时间。</p><p><img src="C:\Users\saca\AppData\Roaming\marktext\images\2024-09-06-10-15-48-image.png" alt="从我们ppt上面拔下来的图，来自教材：Computer Network(6th)by A.S.Tanenbaum"></p><h3 id="CSMA-CD"><a href="#CSMA-CD" class="headerlink" title="CSMA&#x2F;CD"></a>CSMA&#x2F;CD</h3><p>在发送后，如果冲突，放弃发送。</p><p>CSMA&#x2F;CD的争用期 2t</p><p><strong>最小帧长</strong>：64bit。</p><p>这一时期就是争用期</p><p>所有小于64字节的帧都是由于碰撞的无效帧</p><p><strong>最大帧长</strong>：1518字节（以太网V2）&#x2F;1522字节（802.1Q帧）</p><p>截断二进制指数退避算法</p><p>退避时间 &#x3D; $2t*r$</p><p>$r &#x3D; rand(0,2^k-1)$</p><p>$k &#x3D; min(重传次数，10)$</p><p>重传最多16次。</p><h4 id="信道利用率"><a href="#信道利用率" class="headerlink" title="信道利用率"></a>信道利用率</h4><p>发送结束后需要经过1个t才能继续发送。</p><p>Smax &#x3D; 1&#x2F;(1+a)</p><p>a &#x3D; t&#x2F;Ta。</p><h3 id="CSMA-CA"><a href="#CSMA-CA" class="headerlink" title="CSMA&#x2F;CA"></a>CSMA&#x2F;CA</h3><ul><li><p>停-等ARQ协议</p></li><li><p>等待一个时间IFS发送下一帧</p></li><li><p>不采用CD的发送停止。</p></li><li><p>虚拟载波监听，接收方通知所有发送方发送时间。</p></li><li><p>退避计时器，在帧间间隔后随机退避。</p></li><li><p>如果退避时发现了冲突，冻结退避期。</p></li><li><p>可以使用RTS&#x2F;CTS进行信道预约。</p></li></ul><p>CSMA&#x2F;CA不能解决暴露站问题，可以解决隐蔽站问题。 </p><h4 id="网络分配向量（NAV）"><a href="#网络分配向量（NAV）" class="headerlink" title="网络分配向量（NAV）"></a>网络分配向量（NAV）</h4><p>指出信道忙的时间，通过RTS&#x2F;CTS进行说明。</p><p>一般的帧的占用时间：本帧发送-本帧的ACK帧发送完毕</p><p>RTS、CTS的占用时间：本帧发送完毕-被预约帧的ACK帧发送完毕</p><p>CTS帧是RTS帧的确认帧。</p><h3 id="其他协议"><a href="#其他协议" class="headerlink" title="其他协议"></a>其他协议</h3><h4 id="令牌环"><a href="#令牌环" class="headerlink" title="令牌环"></a>令牌环</h4><p>令牌环网络沿着一个环传递令牌。只有获得令牌的节点才能发送帧。令牌环是最经典的无冲突协议。</p><h4 id="二进制倒计数（不在考纲中）"><a href="#二进制倒计数（不在考纲中）" class="headerlink" title="二进制倒计数（不在考纲中）"></a>二进制倒计数（不在考纲中）</h4><h4 id="自适应树遍历协议-（不在考纲中）"><a href="#自适应树遍历协议-（不在考纲中）" class="headerlink" title="自适应树遍历协议 （不在考纲中）"></a>自适应树遍历协议 （不在考纲中）</h4>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>考研</tag>
+      
+      <tag>408</tag>
+      
+      <tag>计网</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>物理层-设备和介质</title>
     <link href="/2024/09/04/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/CN-%E7%89%A9%E7%90%86%E5%B1%82-3/"/>
     <url>/2024/09/04/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/CN-%E7%89%A9%E7%90%86%E5%B1%82-3/</url>
     
-    <content type="html"><![CDATA[<h3 id="集线器-Hub"><a href="#集线器-Hub" class="headerlink" title="集线器 Hub"></a>集线器 Hub</h3><p>作用：集线。</p><p>充当一根总线。</p><p>集线器采用泛洪的方法输出。</p><p>连接n个设备时，这些设备的平均速率下降为1&#x2F;n。</p><h3 id="中继器-repeater"><a href="#中继器-repeater" class="headerlink" title="中继器 repeater"></a>中继器 repeater</h3><p>作用：放大信号。</p><p>延长信号的最大范围。</p><h3 id="冲突域"><a href="#冲突域" class="headerlink" title="冲突域"></a>冲突域</h3><p>争用信道的网络域。一个冲突域中最多同时只能有一台计算机发出信号。</p><h3 id="10Base-T-网络的5-4-3原则："><a href="#10Base-T-网络的5-4-3原则：" class="headerlink" title="10Base-T 网络的5-4-3原则："></a>10Base-T 网络的5-4-3原则：</h3><p>一个冲突域中，任意两台计算机之间最多使用5根网线，4个中继器，其中只有3段线可以挂载计算机。</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="集线器-Hub"><a href="#集线器-Hub" class="headerlink" title="集线器 Hub"></a>集线器 Hub</h3><p>作用：集线。</p><p>充当一根总线。</p><p>集线器采用泛洪的方法输出。</p><p>连接n个设备时，这些设备的平均速率下降为1&#x2F;n。</p><h3 id="中继器-repeater"><a href="#中继器-repeater" class="headerlink" title="中继器 repeater"></a>中继器 repeater</h3><p>作用：放大信号。</p><p>延长信号的最大范围。</p><h3 id="冲突域"><a href="#冲突域" class="headerlink" title="冲突域"></a>冲突域</h3><p>争用信道的网络域。一个冲突域中最多同时只能有一台计算机发出信号。</p><h3 id="10Base-T-网络的5-4-3原则："><a href="#10Base-T-网络的5-4-3原则：" class="headerlink" title="10Base-T 网络的5-4-3原则："></a>10Base-T 网络的5-4-3原则：</h3><p>一个冲突域中，任意两台计算机之间最多使用5根网线，4个中继器，其中只有3段线可以挂载计算机。</p><h2 id="物理传输介质"><a href="#物理传输介质" class="headerlink" title="物理传输介质"></a>物理传输介质</h2><p>参考： <a href="https://www.zhihu.com/tardis/zm/art/363976962?source_id=1005#">https://www.zhihu.com/tardis/zm/art/363976962?source_id=1005#</a></p><h3 id="双绞线-TP"><a href="#双绞线-TP" class="headerlink" title="双绞线 TP"></a>双绞线 TP</h3><p>分为屏蔽和非屏蔽两类。</p><h4 id="非屏蔽双绞线-UTP"><a href="#非屏蔽双绞线-UTP" class="headerlink" title="非屏蔽双绞线 UTP"></a>非屏蔽双绞线 UTP</h4><ul><li><p>最常见</p></li><li><p>5类用于以太网10Base-T</p></li></ul><h4 id="屏蔽双绞线-STP"><a href="#屏蔽双绞线-STP" class="headerlink" title="屏蔽双绞线 STP"></a>屏蔽双绞线 STP</h4><ul><li><p>双绞线外加屏蔽层</p></li><li><p>更贵</p></li></ul><h3 id="光纤"><a href="#光纤" class="headerlink" title="光纤"></a>光纤</h3><p>全反射</p><h4 id="单模光纤"><a href="#单模光纤" class="headerlink" title="单模光纤"></a>单模光纤</h4><ul><li><p>直径只有波长，让光直线传播</p></li><li><p>衰减小</p></li><li><p>光源是激光</p></li></ul><h4 id="多模光纤"><a href="#多模光纤" class="headerlink" title="多模光纤"></a>多模光纤</h4><ul><li><p>直径大于波长</p></li><li><p>多条光可以同时传播</p></li><li><p>衰减大</p></li><li><p>光源是发光二极管</p></li></ul><h3 id="同轴电缆"><a href="#同轴电缆" class="headerlink" title="同轴电缆"></a>同轴电缆</h3><ul><li><p>抗干扰强，速率高</p></li><li><p>半双工</p></li><li><p>50&#x2F;75 欧姆两类。</p></li></ul><h2 id="无线传输介质"><a href="#无线传输介质" class="headerlink" title="无线传输介质"></a>无线传输介质</h2><p>无线电，微波，激光和红外。</p>]]></content>
     
     
     
@@ -188,6 +270,31 @@
   
   
   <entry>
+    <title>xml2</title>
+    <link href="/2024/09/02/courses/%E6%9C%8D%E5%8A%A1%E8%AE%A1%E7%AE%97/xml2/"/>
+    <url>/2024/09/02/courses/%E6%9C%8D%E5%8A%A1%E8%AE%A1%E7%AE%97/xml2/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>服务计算</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>课程</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>漫谈：过于刻板的轻小说ヤンデレ刻板印象</title>
     <link href="/2024/08/27/others/yandere/"/>
     <url>/2024/08/27/others/yandere/</url>
@@ -261,7 +368,7 @@
   
   
   <entry>
-    <title>决裂</title>
+    <title></title>
     <link href="/2024/07/29/others/cp1/"/>
     <url>/2024/07/29/others/cp1/</url>
     
@@ -270,7 +377,7 @@
     
     <categories>
       
-      <category>晚风之舞蹈</category>
+      <category>晚风之舞</category>
       
     </categories>
     
