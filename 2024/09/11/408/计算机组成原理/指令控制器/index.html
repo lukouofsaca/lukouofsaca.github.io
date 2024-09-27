@@ -16,19 +16,24 @@
   <meta name="author" content="LukouofSaca">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
-<meta property="og:title" content="ipv4-1">
-<meta property="og:url" content="http://lukouofsaca.github.io/2024/09/06/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ipv4-1/index.html">
+    <meta name="description" content="硬布线控制器取值周期 间址周期 执行周期 中断周期 影响流水线的因素 资源冲突   停一个周期  冗余资源配置    数据相关   超前读取  阻塞  编译优化    控制冲突   预设  预读取指令  提前条件码  提高猜测率   流水线分类 部件功能级  处理机级  处理机间级   单、多 动态流水线&#x2F;静态流水线 动态流水线：不同的段连接不同的流水线 线性流水线和非线性流水线 流水线">
+<meta property="og:type" content="article">
+<meta property="og:title" content="指令控制器">
+<meta property="og:url" content="http://lukouofsaca.github.io/2024/09/11/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E6%8C%87%E4%BB%A4%E6%8E%A7%E5%88%B6%E5%99%A8/index.html">
 <meta property="og:site_name" content="Saca&#39;s Blog">
+<meta property="og:description" content="硬布线控制器取值周期 间址周期 执行周期 中断周期 影响流水线的因素 资源冲突   停一个周期  冗余资源配置    数据相关   超前读取  阻塞  编译优化    控制冲突   预设  预读取指令  提前条件码  提高猜测率   流水线分类 部件功能级  处理机级  处理机间级   单、多 动态流水线&#x2F;静态流水线 动态流水线：不同的段连接不同的流水线 线性流水线和非线性流水线 流水线">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-09-06T08:37:22.000Z">
-<meta property="article:modified_time" content="2024-09-06T08:37:22.317Z">
+<meta property="article:published_time" content="2024-09-11T10:55:55.000Z">
+<meta property="article:modified_time" content="2024-09-11T11:18:13.320Z">
 <meta property="article:author" content="LukouofSaca">
+<meta property="article:tag" content="考研">
+<meta property="article:tag" content="408">
+<meta property="article:tag" content="计组">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>ipv4-1 - Saca&#39;s Blog</title>
+  <title>指令控制器 - Saca&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -194,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="ipv4-1"></span>
+            <span id="subtitle" data-typed-text="指令控制器"></span>
           
         </div>
 
@@ -205,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-09-06 16:37" pubdate>
-          2024年9月6日 下午
+        <time datetime="2024-09-11 18:55" pubdate>
+          2024年9月11日 晚上
         </time>
       </span>
     
@@ -217,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          223 字
         
       </span>
     
@@ -228,7 +233,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -265,12 +270,67 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">ipv4-1</h1>
+            <h1 id="seo-header">指令控制器</h1>
             
             
               <div class="markdown-body">
                 
-                
+                <h2 id="硬布线控制器"><a href="#硬布线控制器" class="headerlink" title="硬布线控制器"></a>硬布线控制器</h2><p>取值周期</p>
+<p>间址周期</p>
+<p>执行周期</p>
+<p>中断周期</p>
+<h2 id="影响流水线的因素"><a href="#影响流水线的因素" class="headerlink" title="影响流水线的因素"></a>影响流水线的因素</h2><ol>
+<li>资源冲突</li>
+</ol>
+<ul>
+<li><p>停一个周期</p>
+</li>
+<li><p>冗余资源配置</p>
+</li>
+</ul>
+<ol start="2">
+<li>数据相关</li>
+</ol>
+<ul>
+<li><p>超前读取</p>
+</li>
+<li><p>阻塞</p>
+</li>
+<li><p>编译优化</p>
+</li>
+</ul>
+<ol start="3">
+<li>控制冲突</li>
+</ol>
+<ul>
+<li><p>预设</p>
+</li>
+<li><p>预读取指令</p>
+</li>
+<li><p>提前条件码</p>
+</li>
+<li><p>提高猜测率</p>
+</li>
+</ul>
+<h2 id="流水线分类"><a href="#流水线分类" class="headerlink" title="流水线分类"></a>流水线分类</h2><ol>
+<li><p>部件功能级</p>
+</li>
+<li><p>处理机级</p>
+</li>
+<li><p>处理机间级</p>
+</li>
+</ol>
+<p>单、多</p>
+<p>动态流水线&#x2F;静态流水线</p>
+<p>动态流水线：不同的段连接不同的流水线</p>
+<p>线性流水线和非线性流水线</p>
+<h2 id="流水线多发"><a href="#流水线多发" class="headerlink" title="流水线多发"></a>流水线多发</h2><h3 id="超标量"><a href="#超标量" class="headerlink" title="超标量"></a>超标量</h3><p>一个周期运行多个独立指令</p>
+<p>不能调整指令执行顺序</p>
+<h3 id="超流水技术"><a href="#超流水技术" class="headerlink" title="超流水技术"></a>超流水技术</h3><p>一个时钟（机器）周期再次分段</p>
+<p>上述两种不能调整顺序</p>
+<h3 id="超长指令字"><a href="#超长指令字" class="headerlink" title="超长指令字"></a>超长指令字</h3><p>将多条能并行的指令组合为一条。</p>
+<p>（我去，408不考tomasulo 和score board）</p>
+
                 
               </div>
             
@@ -278,6 +338,17 @@
             <div>
               <div class="post-metas my-3">
   
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E8%80%83%E7%A0%94/" class="print-no-link">#考研</a>
+      
+        <a href="/tags/408/" class="print-no-link">#408</a>
+      
+        <a href="/tags/%E8%AE%A1%E7%BB%84/" class="print-no-link">#计组</a>
+      
+    </div>
   
 </div>
 
@@ -287,8 +358,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>ipv4-1</div>
-      <div>http://lukouofsaca.github.io/2024/09/06/408/计算机网络/ipv4-1/</div>
+      <div>指令控制器</div>
+      <div>http://lukouofsaca.github.io/2024/09/11/408/计算机组成原理/指令控制器/</div>
     </div>
     <div class="license-meta">
       
@@ -300,7 +371,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年9月6日</div>
+          <div>2024年9月11日</div>
         </div>
       
       
@@ -332,9 +403,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/09/11/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E6%8C%87%E4%BB%A4%E6%8E%A7%E5%88%B6%E5%99%A8/" title="指令控制器">
+                      <a href="/2024/09/14/xml3/" title="xml3">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">指令控制器</span>
+                        <span class="hidden-mobile">xml3</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -342,8 +413,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/09/06/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/CN-MAC-STP/" title="介质访问子层-以太网">
-                        <span class="hidden-mobile">介质访问子层-以太网</span>
+                      <a href="/2024/09/06/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ipv4-1/" title="ipv4-1">
+                        <span class="hidden-mobile">ipv4-1</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -16,19 +16,22 @@
   <meta name="author" content="LukouofSaca">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
-<meta property="og:title" content="ipv4-1">
-<meta property="og:url" content="http://lukouofsaca.github.io/2024/09/06/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/ipv4-1/index.html">
+    <meta name="description" content="有前缀和无前缀的名称空间     有前缀         xmlns:zs &#x3D; k1         xmlns &#x3D; kk 前缀只是小名，名称空间证实的名称用的是其正式名称 标记中的名称空间12&lt;p1:张三 xmlns:p1 &#x3D; &quot;jilin&quot;&gt;&lt;&#x2F;p1&gt;  除非在本级显示声明，否则一个标签的名称空间是其父标记的名称空间。 e.g.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="xml3">
+<meta property="og:url" content="http://lukouofsaca.github.io/2024/09/14/xml3/index.html">
 <meta property="og:site_name" content="Saca&#39;s Blog">
+<meta property="og:description" content="有前缀和无前缀的名称空间     有前缀         xmlns:zs &#x3D; k1         xmlns &#x3D; kk 前缀只是小名，名称空间证实的名称用的是其正式名称 标记中的名称空间12&lt;p1:张三 xmlns:p1 &#x3D; &quot;jilin&quot;&gt;&lt;&#x2F;p1&gt;  除非在本级显示声明，否则一个标签的名称空间是其父标记的名称空间。 e.g.">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-09-06T08:37:22.000Z">
-<meta property="article:modified_time" content="2024-09-06T08:37:22.317Z">
+<meta property="article:published_time" content="2024-09-14T05:35:38.000Z">
+<meta property="article:modified_time" content="2024-09-14T06:47:44.250Z">
 <meta property="article:author" content="LukouofSaca">
+<meta property="article:tag" content="课程">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>ipv4-1 - Saca&#39;s Blog</title>
+  <title>xml3 - Saca&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -194,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="ipv4-1"></span>
+            <span id="subtitle" data-typed-text="xml3"></span>
           
         </div>
 
@@ -205,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-09-06 16:37" pubdate>
-          2024年9月6日 下午
+        <time datetime="2024-09-14 13:35" pubdate>
+          2024年9月14日 下午
         </time>
       </span>
     
@@ -217,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          483 字
         
       </span>
     
@@ -228,7 +231,7 @@
         
         
         
-          1 分钟
+          5 分钟
         
       </span>
     
@@ -265,12 +268,85 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">ipv4-1</h1>
+            <h1 id="seo-header">xml3</h1>
             
             
               <div class="markdown-body">
                 
-                
+                <p>有前缀和无前缀的名称空间</p>
+<p>    有前缀</p>
+<p>        xmlns:zs &#x3D; k1</p>
+<p>        xmlns &#x3D; kk</p>
+<p><strong>前缀只是小名，名称空间证实的名称用的是其正式名称</strong></p>
+<h4 id="标记中的名称空间"><a href="#标记中的名称空间" class="headerlink" title="标记中的名称空间"></a>标记中的名称空间</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p1:张三</span> <span class="hljs-attr">xmlns:p1</span> = <span class="hljs-string">&quot;jilin&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">p1</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>除非在本级显示声明，否则一个标签的名称空间是其父标记的名称空间。</p>
+<p>e.g.</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-meta">&lt;?xml version=<span class="hljs-string">&quot;1.0&quot;</span>?&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">ns1:fruits</span> <span class="hljs-attr">xmlns:ns</span>=<span class="hljs-string">&quot;ns1&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">ns2:p1</span> <span class="hljs-attr">xmlns:ns</span>=<span class="hljs-string">&quot;ns2&quot;</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">null</span>/&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">ns2</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">ns1</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>W3C建议使用统一资源标识符来作为名称空间名字</p>
+<h2 id="2-9-区分大小写"><a href="#2-9-区分大小写" class="headerlink" title="2.9 区分大小写"></a>2.9 区分大小写</h2><p>XML严格区分大小写。</p>
+<h1 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h1><h3 id="1。-xml-声明有哪些属性？"><a href="#1。-xml-声明有哪些属性？" class="headerlink" title="1。 xml 声明有哪些属性？"></a>1。 xml 声明有哪些属性？</h3><ul>
+<li>version, encoding, standalone.</li>
+</ul>
+<h3 id="2。XML有那些特殊字符？"><a href="#2。XML有那些特殊字符？" class="headerlink" title="2。XML有那些特殊字符？"></a>2。XML有那些特殊字符？</h3><ul>
+<li><p>&lt; &amp; lt;</p>
+</li>
+<li><p>&gt;  &amp; gt;</p>
+</li>
+<li><p>&amp;  &amp; amp;</p>
+</li>
+<li><p>&apos;    &amp; apos;</p>
+</li>
+<li><p>“&quot;</p>
+</li>
+</ul>
+<h3 id="3。说明名称空间的作用以及分类。"><a href="#3。说明名称空间的作用以及分类。" class="headerlink" title="3。说明名称空间的作用以及分类。"></a>3。说明名称空间的作用以及分类。</h3><ul>
+<li>解决标记相同的问题</li>
+</ul>
+<h1 id="第三章-XML数据的底层结构"><a href="#第三章-XML数据的底层结构" class="headerlink" title="第三章 XML数据的底层结构"></a>第三章 XML数据的底层结构</h1><h2 id="3-XML-DTD"><a href="#3-XML-DTD" class="headerlink" title="3. XML&#x2F;DTD"></a>3. XML&#x2F;DTD</h2><p>xml&#x2F;dtd</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs xml-doc">&lt;!DOCTYPE 根标记[<br>   DTD内容(标记)<br>]&gt;<br></code></pre></td></tr></table></figure>
+
+<h4 id="外部dtd"><a href="#外部dtd" class="headerlink" title="外部dtd"></a>外部dtd</h4><p>SYSTEM&#x2F; 外部dtd</p>
+<p>PUBLIC&#x2F; 公用dtd</p>
+<p>公用标识符   -ISO&#x2F;&#x2F;单位名&#x2F;&#x2F;DTD说明&#x2F;&#x2F;语言</p>
+<h4 id="联合使用"><a href="#联合使用" class="headerlink" title="联合使用"></a>联合使用</h4><p>把外部dtd加到内部dtd”根标记”的后面</p>
+<h3 id="DTDd-元素"><a href="#DTDd-元素" class="headerlink" title="DTDd 元素"></a>DTDd 元素</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-meta">&lt;!ELEMENT <span class="hljs-keyword">#PCDATA</span>()&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>定义标记的子标记和子标记的顺序、次数：</p>
+<p>EMPTY</p>
+<p>ANY</p>
+<p>描述</p>
+<p>EMPTY定义空标记.</p>
+<p>例如：</p>
+<!ELEMENT abc EMPTY>
+
+<p>对应</p>
+<abc/>
+
+<p>ANY表示任意标记.</p>
+<p>例如：</p>
+<!ELEMENT persion ANY>
+
+<p>表明其子标记可以是任意的标记。</p>
+<h4 id="pcdata"><a href="#pcdata" class="headerlink" title="#pcdata"></a>#pcdata</h4><p>表示任意标记。</p>
+<h4 id="定义子标记"><a href="#定义子标记" class="headerlink" title="定义子标记"></a>定义子标记</h4><!ELEMENT persion (name,sex,age)>
+
+<p>表示persion 有三个子标记 name sex age,按照顺序出现。</p>
+<p>?表示0-1次</p>
+<p>*表示0-多次</p>
+<p>+表示1-多次</p>
+<h2 id="属性定义"><a href="#属性定义" class="headerlink" title="属性定义"></a>属性定义</h2><p> 各自声明</p>
+<h4 id="名称-标记相同"><a href="#名称-标记相同" class="headerlink" title="名称 标记相同"></a>名称 标记相同</h4><p>属性类型有7种</p>
+<p>CDATA, 枚举,ID属性，IDREF&#x2F;S，NOTATION, ENTITY,NMTOKEN</p>
+<p>属性默认值</p>
+<p>字符串 #implied 空  required 要求 #fixed 字符串 若添加为字符串</p>
+<p>实体：</p>
+<p>!entity 内容 URI</p>
+<p>实体的引用:</p>
+<p>&amp;实体名称;</p>
+<p>解析器在解析的时候会替换。</p>
+
                 
               </div>
             
@@ -278,6 +354,13 @@
             <div>
               <div class="post-metas my-3">
   
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E8%AF%BE%E7%A8%8B/" class="print-no-link">#课程</a>
+      
+    </div>
   
 </div>
 
@@ -287,8 +370,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>ipv4-1</div>
-      <div>http://lukouofsaca.github.io/2024/09/06/408/计算机网络/ipv4-1/</div>
+      <div>xml3</div>
+      <div>http://lukouofsaca.github.io/2024/09/14/xml3/</div>
     </div>
     <div class="license-meta">
       
@@ -300,7 +383,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年9月6日</div>
+          <div>2024年9月14日</div>
         </div>
       
       
@@ -332,9 +415,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/09/11/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E6%8C%87%E4%BB%A4%E6%8E%A7%E5%88%B6%E5%99%A8/" title="指令控制器">
+                      <a href="/2024/09/19/others/%E7%BA%A2%E8%8C%B6%E4%B8%8E%E5%A4%A7%E5%B0%8F%E5%A7%90/" title="红茶与二次元的大小姐">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">指令控制器</span>
+                        <span class="hidden-mobile">红茶与二次元的大小姐</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -342,8 +425,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/09/06/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/CN-MAC-STP/" title="介质访问子层-以太网">
-                        <span class="hidden-mobile">介质访问子层-以太网</span>
+                      <a href="/2024/09/11/408/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/%E6%8C%87%E4%BB%A4%E6%8E%A7%E5%88%B6%E5%99%A8/" title="指令控制器">
+                        <span class="hidden-mobile">指令控制器</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

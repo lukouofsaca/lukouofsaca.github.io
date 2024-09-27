@@ -16,13 +16,15 @@
   <meta name="author" content="LukouofSaca">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
+    <meta name="description" content="XML文件的规则 属性设置。  版本声明：声明xml的版本（目前只有1.0） 1234&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;UTF-8&quot;?&gt;&lt;root&gt;    &lt;element&gt;value&lt;&#x2F;element&gt;&lt;&#x2F;root&gt;  stadnalone：独立属性，表示其是否引用了外部">
+<meta property="og:type" content="article">
 <meta property="og:title" content="xml2">
 <meta property="og:url" content="http://lukouofsaca.github.io/2024/09/02/courses/%E6%9C%8D%E5%8A%A1%E8%AE%A1%E7%AE%97/xml2/index.html">
 <meta property="og:site_name" content="Saca&#39;s Blog">
+<meta property="og:description" content="XML文件的规则 属性设置。  版本声明：声明xml的版本（目前只有1.0） 1234&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;UTF-8&quot;?&gt;&lt;root&gt;    &lt;element&gt;value&lt;&#x2F;element&gt;&lt;&#x2F;root&gt;  stadnalone：独立属性，表示其是否引用了外部">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-02T06:10:13.000Z">
-<meta property="article:modified_time" content="2024-09-09T05:33:08.395Z">
+<meta property="article:modified_time" content="2024-09-09T06:47:38.881Z">
 <meta property="article:author" content="LukouofSaca">
 <meta property="article:tag" content="课程">
 <meta name="twitter:card" content="summary_large_image">
@@ -218,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          112 字
         
       </span>
     
@@ -271,7 +273,26 @@
             
               <div class="markdown-body">
                 
-                
+                <h2 id="XML文件的规则"><a href="#XML文件的规则" class="headerlink" title="XML文件的规则"></a>XML文件的规则</h2><ol>
+<li>属性设置。</li>
+</ol>
+<p>版本声明：声明xml的版本（目前只有1.0）</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-meta">&lt;?xml version=<span class="hljs-string">&quot;1.0&quot;</span> encoding=<span class="hljs-string">&quot;UTF-8&quot;</span>?&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">root</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">element</span>&gt;</span>value<span class="hljs-tag">&lt;/<span class="hljs-name">element</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">root</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+<p>stadnalone：独立属性，表示其是否引用了外部的xml schema</p>
+<p>标记符：下划线或者大小写字母开头。</p>
+<p>特殊字符的处理</p>
+<blockquote>
+<p>预定义标签</p>
+</blockquote>
+<h3 id="CDATA段"><a href="#CDATA段" class="headerlink" title="CDATA段"></a>CDATA段</h3><pre>标记********</pre>
+
+<p>本段内容会按原样解析，</p>
+<p>使用：</p>
+<![CDATA[
+
+]]>
+
                 
               </div>
             
